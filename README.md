@@ -11,7 +11,7 @@ virtualenv appenv
 source appenv/bin/activate
 pip install -r requirements.txt
 cd app
-python makemigrations images
+python manage.py makemigrations images
 python manage.py migrate
 ```
 
