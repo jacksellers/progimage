@@ -27,6 +27,11 @@ python manage.py runserver
 ```
 Visit http://127.0.0.1:8000/admin/ for the admin site
 
+To use the admin site, first create a superuser:
+```
+python manage.py createsuperuser
+```
+
 Visit http://127.0.0.1:8000/images/upload/ to upload an image with the browsable API
 
 (replace 'upload' in the above URL with your image code to download it)
