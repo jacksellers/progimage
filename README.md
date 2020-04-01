@@ -17,6 +17,7 @@ python manage.py migrate
 ### Testing
 Run unit tests:
 ```
+mkdir media
 python manage.py test
 ```
 Run the server:
