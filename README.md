@@ -11,7 +11,13 @@ virtualenv appenv
 source appenv/bin/activate
 cd app
 python manage.py migrate
-python manage.py runserver
 ```
 
 ### Testing
+```
+python manage.py test
+python manage.py runserver
+
+
+
+```

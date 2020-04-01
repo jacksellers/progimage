@@ -37,15 +37,14 @@ class RetrieveUpdateImageSerializer(serializers.ModelSerializer):
             'description', instance.description
         )
         instance.file_format = validated_data.get(
-            'file_format', instance.file_name
+            'file_format', instance.file_format
         )
         if instance.file_format != image.file_format:
-            old_file = pi.open(image.file_name)
-            rgb_old_file = old_file.convert('RGB')
+            old_file = pi.open(image.file_name).convert('RGB')
             new_file_name = os.path.splitext(
                 str(image.file_name)
             )[0].lower() + instance.file_format
-            rgb_old_file.save('media/' + new_file_name)
+            old_file.save('media/' + new_file_name)
             instance.file_name = new_file_name
         instance.save()
         return instance
